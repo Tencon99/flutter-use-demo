@@ -171,6 +171,7 @@ class HimalayaLogic extends GetxController {
   ///监听搜索输入
   void onSearch(String msg) {
     Get.log('当前输入内容：$msg');
+    print('当前输入内容：$msg');
   }
 
   ///点击导航栏item
