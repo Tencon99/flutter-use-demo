@@ -239,12 +239,20 @@ class HimalayaLogic extends GetxController {
   void onInit() {
     //设置窗口顶部标题
     WindowSize.setWindowTitle('喜马拉雅演示demo');
+    print('onInit');
     super.onInit();
+  }
+
+  @override
+  void onReady() {
+    print('onReady');
+    super.onReady();
   }
 
   @override
   void onClose() {
     WindowSize.setWindowTitle('Flutter Use');
+    print('onClost');
     super.onClose();
   }
 }

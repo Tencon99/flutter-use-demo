@@ -123,27 +123,54 @@ class HimalayaAudioConsole extends StatelessWidget {
           //标题和事件
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(children: [
-              //标题信息
               GetBuilder<HimalayaLogic>(
                 builder: (logic) {
-                  return Text(
-                    data.title,
-                    style: TextStyle(fontSize: 15.sp),
+                  return RichText(
+                    overflow: TextOverflow.ellipsis,
+                    text: TextSpan(
+                      children: <TextSpan>[
+                        // 标题信息
+                        TextSpan(
+                          text: data.title,
+                          style: TextStyle(fontSize: 15.sp),
+                        ),
+
+                        TextSpan(
+                          text: '  ',
+                          style: TextStyle(fontSize: 15.sp),
+                        ),
+
+                        TextSpan(
+                          text: data.subTitle ?? '',
+                          style: TextStyle(fontSize: 15.sp),
+                        )
+                      ],
+                    ),
                   );
                 },
               ),
 
-              Container(width: 15.dp),
+              // //标题信息
+              // GetBuilder<HimalayaLogic>(
+              //   builder: (logic) {
+              //     return Text(
+              //       data.title,
+              //       style: TextStyle(fontSize: 15.sp),
+              //     );
+              //   },
+              // ),
 
-              //副标题信息
-              GetBuilder<HimalayaLogic>(
-                builder: (logic) {
-                  return Text(
-                    data.subTitle ?? '',
-                    style: TextStyle(fontSize: 15.sp),
-                  );
-                },
-              ),
+              // Container(width: 15.dp),
+
+              // //副标题信息
+              // GetBuilder<HimalayaLogic>(
+              //   builder: (logic) {
+              //     return Text(
+              //       data.subTitle ?? '',
+              //       style: TextStyle(fontSize: 15.sp),
+              //     );
+              //   },
+              // ),
             ]),
 
             //进度
