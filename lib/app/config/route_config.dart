@@ -23,6 +23,7 @@ import 'package:flutter_use/module/example/provider/span_page/span_one/view.dart
 import 'package:flutter_use/module/example/provider/span_page/span_two/view.dart';
 import 'package:flutter_use/module/example/provider/test_notifier/view.dart';
 import 'package:flutter_use/module/example/test/test_layout/view.dart';
+import 'package:flutter_use/module/function/appbar/view.dart';
 import 'package:flutter_use/module/function/dialog/view.dart';
 import 'package:flutter_use/module/function/himalaya/view.dart';
 import 'package:flutter_use/module/function/smart_dialog/view.dart';
@@ -37,6 +38,7 @@ class RouteConfig {
   static const String smartDialog = "/smartDialog";
   static const String himalaya = "/himalaya";
   static const String dialog = "/dialog";
+  static const String appbar = "/appbar";
 
   ///bloc计数器模块 Bloc跨页面传递事件
   static const String blCubitCounterPage = "/blCubitCounterPage";
@@ -74,6 +76,7 @@ class RouteConfig {
   static final List<GetPage> getPages = [
     GetPage(name: main, page: () => MainPage()),
     GetPage(name: dialog, page: () => DialogPage()),
+    GetPage(name: appbar, page: () => AppbarPage()),
     GetPage(name: blCubitCounterPage, page: () => BlCubitCounterPage()),
     GetPage(name: blBlocCounterPage, page: () => BlBlocCounterPage()),
     GetPage(name: streamPage, page: () => StreamPage()),

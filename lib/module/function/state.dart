@@ -20,14 +20,14 @@ class FunctionState {
         bg: ImageFunctionConfig.functionBgOne,
       ),
       //暂不需要
-      // BtnInfo(
-      //   title: '弹窗控件',
-      //   tag: FunctionConfig.dialog,
-      //   bg: ImageFunctionConfig.functionBgTwo,
-      // ),
       BtnInfo(
-        title: '测试',
-        tag: FunctionConfig.test,
+        title: '弹窗控件',
+        tag: FunctionConfig.dialog,
+        bg: ImageFunctionConfig.functionBgTwo,
+      ),
+      BtnInfo(
+        title: 'appbar测试',
+        tag: FunctionConfig.appbar,
         bg: ImageFunctionConfig.functionBgThree,
       ),
       BtnInfo(

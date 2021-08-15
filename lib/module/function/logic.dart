@@ -19,6 +19,9 @@ class FunctionLogic extends GetxController {
       case FunctionConfig.dialog:
         Get.toNamed(RouteConfig.dialog);
         break;
+      case FunctionConfig.appbar:
+        Get.toNamed(RouteConfig.appbar);
+        break;
       default:
         showSnackBar(context, '暂无');
         break;

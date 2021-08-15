@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: RouteConfig.main,
       getPages: RouteConfig.getPages,
+      debugShowCheckedModeBanner: false,
       builder: (BuildContext context, Widget? child) {
         return FlutterSmartDialog(child: _builder(child));
       },

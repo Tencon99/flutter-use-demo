@@ -1,0 +1,9 @@
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/data/icudtl.dat
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/flutter_windows.dll
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/window_size_plugin.dll
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/data/flutter_assets/NOTICES
+C:/Users/Administrator/Desktop/flutter-use-demo/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf

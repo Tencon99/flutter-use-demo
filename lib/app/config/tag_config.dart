@@ -28,6 +28,7 @@ class ExampleConfig {
   static const String getCounterBinding = 'getCounterBinding';
   static const String counterEasyXBuilder = 'counterEasyXBuilder';
   static const String counterEasyXEbx = 'counterEasyXEbx';
+
   ///Bloc栏目
   static const String blCubitCounter = 'blCubitCounter';
   static const String blBlocCounter = 'blBlocCounter';
@@ -59,6 +60,9 @@ class FunctionConfig {
 
   ///dialog封装技巧
   static const String dialog = 'dialog';
+
+  /// appbar 测试页面
+  static const String appbar = 'appbar';
 
   ///测试
   static const String test = 'test';
