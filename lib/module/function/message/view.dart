@@ -19,6 +19,12 @@ class MessagePage extends StatelessWidget {
             onPressed: logic.toProfile,
             child: Text('跳转到我的'),
           ),
+          TextButton(
+            onPressed: () {
+              logic.toImagePicker(context);
+            },
+            child: Text('图片选择器'),
+          ),
         ],
       ),
       color: Colors.teal[300],

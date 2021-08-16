@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/module/function/appbar/state.dart';
 import 'package:flutter_use/module/function/message/view.dart';
+import 'package:flutter_use/module/function/qr_code/qr_code_page.dart';
 import 'package:get/get.dart';
 
 class AppBarLogic extends GetxController {
@@ -43,6 +44,7 @@ class AppBarLogic extends GetxController {
 
   toQrCode() {
     print('前往二维码界面');
+    Get.to(QrCodePage());
   }
 
   Widget pages() {

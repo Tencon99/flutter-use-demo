@@ -2,6 +2,7 @@ import 'package:flutter_use/module/function/appbar/logic.dart';
 import 'package:flutter_use/module/function/appbar/state.dart';
 import 'package:flutter_use/module/function/message/state.dart';
 import 'package:get/get.dart';
+import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
 class MessageLogic extends GetxController {
   final state = MessageState();
@@ -13,6 +14,10 @@ class MessageLogic extends GetxController {
     state.title = _appBarState.barListItem[_appBarState.selectedIndex]['tag'];
     update();
     super.onInit();
+  }
+
+  toImagePicker(context) async {
+    state.assets = (await AssetPicker.pickAssets(context))!;
   }
 
   toProfile() {

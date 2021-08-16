@@ -3,6 +3,8 @@
    <application
         android:label="flutter_use"
         android:icon="@mipmap/ic_launcher">
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.VIBRATE"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
