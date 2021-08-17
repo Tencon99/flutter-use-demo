@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_use/module/function/appbar/state.dart';
 import 'package:flutter_use/module/function/message/view.dart';
+import 'package:flutter_use/module/function/profile/profile_page.dart';
 import 'package:flutter_use/module/function/qr_code/qr_code_page.dart';
 import 'package:get/get.dart';
 
@@ -53,6 +54,9 @@ class AppBarLogic extends GetxController {
       case 0:
         print('消息页面');
         curPage = MessagePage();
+        break;
+      case 3:
+        curPage = ProfilePage();
         break;
       default:
         curPage = Center(
