@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_use/module/function/code/get_code.dart';
 import 'package:flutter_use/module/function/message/logic.dart';
 import 'package:flutter_use/module/function/message/state.dart';
 import 'package:get/get.dart';
@@ -25,6 +26,7 @@ class MessagePage extends StatelessWidget {
             },
             child: Text('图片选择器'),
           ),
+          GetCode(text: state.text, isValidated: true, onTap: logic.getCode),
         ],
       ),
       color: Colors.teal[300],
