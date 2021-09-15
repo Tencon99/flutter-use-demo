@@ -1,3 +1,4 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_use/module/example/bloc/counter_bloc/view.dart';
 import 'package:flutter_use/module/example/bloc/counter_cubit/view.dart';
 import 'package:flutter_use/module/example/bloc/custom_builder/view.dart';
@@ -26,9 +27,12 @@ import 'package:flutter_use/module/example/test/test_layout/view.dart';
 import 'package:flutter_use/module/function/appbar/view.dart';
 import 'package:flutter_use/module/function/dialog/view.dart';
 import 'package:flutter_use/module/function/himalaya/view.dart';
+import 'package:flutter_use/module/function/image_preview/image_preview_view.dart';
 import 'package:flutter_use/module/function/smart_dialog/view.dart';
+import 'package:flutter_use/module/function/tabbar/tabbar_view.dart';
 import 'package:flutter_use/module/main/view.dart';
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart' as prefix;
 
 class RouteConfig {
   ///主页面
@@ -39,6 +43,8 @@ class RouteConfig {
   static const String himalaya = "/himalaya";
   static const String dialog = "/dialog";
   static const String appbar = "/appbar";
+  static const String tabbar = "/tabbar";
+  static const String imagePreview = '/image_preview';
 
   ///bloc计数器模块 Bloc跨页面传递事件
   static const String blCubitCounterPage = "/blCubitCounterPage";
@@ -77,6 +83,7 @@ class RouteConfig {
     GetPage(name: main, page: () => MainPage()),
     GetPage(name: dialog, page: () => DialogPage()),
     GetPage(name: appbar, page: () => AppbarPage()),
+    GetPage(name: tabbar, page: () => TabbarPage()),
     GetPage(name: blCubitCounterPage, page: () => BlCubitCounterPage()),
     GetPage(name: blBlocCounterPage, page: () => BlBlocCounterPage()),
     GetPage(name: streamPage, page: () => StreamPage()),
@@ -107,5 +114,11 @@ class RouteConfig {
     GetPage(name: customBuilderPage, page: () => CustomBuilderPage()),
     GetPage(name: counterEasyPPage, page: () => CounterEasyPPage()),
     GetPage(name: counterGlobalEasyPPage, page: () => CounterGlobalEasyPPage()),
+    GetPage(
+      name: imagePreview,
+      page: () => ImagePreviewPage(),
+      transition: prefix.Transition.fadeIn,
+      transitionDuration: Duration(milliseconds: 1000),
+    ),
   ];
 }

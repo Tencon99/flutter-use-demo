@@ -64,6 +64,9 @@ class FunctionConfig {
   /// appbar 测试页面
   static const String appbar = 'appbar';
 
+  /// tabbar 测试页面
+  static const String tabbar = 'tabbar';
+
   ///测试
   static const String test = 'test';
 }

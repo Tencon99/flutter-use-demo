@@ -24,7 +24,7 @@ class FilmContent extends GetView<ProfileLogic> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.network(
-                    'https://img1.gamersky.com/image2019/07/20190725_ll_red_136_2/gamersky_07small_14_201972510258D0.jpg',
+                    'https://img.zcool.cn/community/01c6615d3ae047a8012187f447cfef.jpg@1280w_1l_2o_100sh.jpg',
                     width: 130,
                     height: 180,
                     fit: BoxFit.cover,

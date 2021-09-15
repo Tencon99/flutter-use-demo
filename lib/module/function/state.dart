@@ -31,8 +31,8 @@ class FunctionState {
         bg: ImageFunctionConfig.functionBgThree,
       ),
       BtnInfo(
-        title: '测试',
-        tag: FunctionConfig.test,
+        title: 'tab测试',
+        tag: FunctionConfig.tabbar,
         bg: ImageFunctionConfig.functionBgFour,
       ),
       BtnInfo(

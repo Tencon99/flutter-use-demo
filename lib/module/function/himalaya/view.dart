@@ -47,6 +47,8 @@ class HimalayaPage extends StatelessWidget {
             onSetting: () => logic.onSetting(),
             //点击头像
             onHeadImg: () => logic.onHeadImg(),
+            controller: state.controller,
+            offstage: state.offstage,
           ),
 
           //右侧信息流 - 可滑动部分

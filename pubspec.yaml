@@ -71,10 +71,15 @@ dependencies:
   scan: ^1.4.3
   # 二维码识别
   qr_flutter: ^4.0.0
+  # 吸顶
+  sticky_headers: ^0.2.0
+  extended_image: ^4.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # https://pub.dev/packages/flutter_swiper
+  flutter_swiper: ^1.1.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

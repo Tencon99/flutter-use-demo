@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_use/app/config/image_config.dart';
 import 'package:flutter_use/app/typedef/function.dart';
 import 'package:flutter_use/app/utils/ui/auto_ui.dart';
+import 'package:flutter_use/module/function/himalaya/logic.dart';
+import 'package:get/get.dart';
 
 ///搜索框 个人信息 设置等按钮
 class HimalayaPersonalInfo extends StatelessWidget {
@@ -15,6 +17,8 @@ class HimalayaPersonalInfo extends StatelessWidget {
     required this.onSkin,
     required this.onChanged,
     required this.onHeadImg,
+    required this.controller,
+    required this.offstage,
   }) : super(key: key);
 
   ///左右箭头回调
@@ -36,30 +40,38 @@ class HimalayaPersonalInfo extends StatelessWidget {
   ///头像回调
   final ParamVoidCallback onHeadImg;
 
+  final TextEditingController controller;
+
+  final bool offstage;
+
   @override
   Widget build(BuildContext context) {
-    return _buildBg(children: [
-      //左图标
-      _buildLeftArrow(),
+    return GetBuilder<HimalayaLogic>(
+      builder: (_) {
+        return _buildBg(children: [
+          //左图标
+          _buildLeftArrow(),
 
-      //右图标
-      _buildRightArrow(),
+          //右图标
+          _buildRightArrow(),
 
-      //刷新图标
-      _buildRefresh(),
+          //刷新图标
+          _buildRefresh(),
 
-      //搜索框
-      _buildSearch(),
+          //搜索框
+          _buildSearch(),
 
-      //头像
-      _buildHeadImg(),
+          //头像
+          _buildHeadImg(),
 
-      //皮肤
-      _buildSkin(),
+          //皮肤
+          _buildSkin(),
 
-      //设置
-      _buildSetting(),
-    ]);
+          //设置
+          _buildSetting(),
+        ]);
+      },
+    );
   }
 
   Widget _buildRefresh() {
@@ -155,6 +167,7 @@ class HimalayaPersonalInfo extends StatelessWidget {
           padding: EdgeInsets.only(left: 12.dp),
           child: TextField(
             autofocus: false,
+            controller: controller,
             textAlign: TextAlign.start,
             textInputAction: TextInputAction.search,
             decoration: InputDecoration(

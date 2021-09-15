@@ -1,4 +1,5 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:flutter_use/app/config/route_config.dart';
 import 'package:flutter_use/app/config/tag_config.dart';
 import 'package:flutter_use/app/utils/ui/show.dart';
 import 'package:flutter_use/app/utils/ui/window_size.dart';
@@ -36,6 +37,7 @@ class HimalayaLogic extends GetxController {
 
   ///封面
   void onCover() {
+    Get.toNamed(RouteConfig.imagePreview, arguments: state.audioPlayInfo.tag);
     showToast('封面');
   }
 
@@ -134,6 +136,7 @@ class HimalayaLogic extends GetxController {
   void clickBanner(int index) {
     String pic = state.bannerList[index];
     List<String> picNames = pic.split('/');
+    Get.toNamed(RouteConfig.imagePreview, arguments: pic);
 
     showToast(picNames[picNames.length - 1]);
   }
@@ -146,6 +149,9 @@ class HimalayaLogic extends GetxController {
   ///处理点击右箭头事件
   void dealRightArrow() {
     showToast('切换栏目');
+    state.offstage = !state.offstage;
+    state.controller.clear();
+    update();
   }
 
   ///刷新数据
@@ -252,6 +258,7 @@ class HimalayaLogic extends GetxController {
   @override
   void onClose() {
     WindowSize.setWindowTitle('Flutter Use');
+    state.controller.clear();
     print('onClost');
     super.onClose();
   }

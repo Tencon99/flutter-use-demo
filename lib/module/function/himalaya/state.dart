@@ -8,6 +8,9 @@ typedef HimalayaRxSubBuilder = Widget Function(HimalayaSubItemInfo item);
 typedef HimalayaItemBuilder = List<Widget> Function(HimalayaItemInfo item);
 
 class HimalayaState {
+  late bool offstage;
+  late TextEditingController controller;
+
   ///左边导航栏
   late List<HimalayaItemInfo> leftItemList;
 
@@ -31,6 +34,8 @@ class HimalayaState {
   late HimalayaSubItemInfo audioPlayInfo;
 
   HimalayaState() {
+    controller = TextEditingController();
+    offstage = false;
     //侧边导航栏目初始数据
     leftItemList = [
       HimalayaItemInfo(title: '推荐', subItemList: [

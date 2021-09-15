@@ -227,7 +227,10 @@ class HimalayaAudioConsole extends StatelessWidget {
           onTap: () => onCover(),
           child: GetBuilder<HimalayaLogic>(
             builder: (logic) {
-              return Image.network(data.tag ?? '');
+              return Hero(
+                tag: data.tag ?? '',
+                child: Image.network(data.tag ?? ''),
+              );
             },
           ),
         ),

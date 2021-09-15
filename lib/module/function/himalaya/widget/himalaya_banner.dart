@@ -28,7 +28,10 @@ class HimalayaBanner extends StatelessWidget {
             onTap: () => onTap(index),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15.dp),
-              child: Image.network(data[index], fit: BoxFit.cover),
+              child: Hero(
+                tag: data[index],
+                child: Image.network(data[index], fit: BoxFit.cover),
+              ),
             ),
           );
         },

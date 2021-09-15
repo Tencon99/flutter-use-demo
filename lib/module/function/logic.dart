@@ -22,6 +22,9 @@ class FunctionLogic extends GetxController {
       case FunctionConfig.appbar:
         Get.toNamed(RouteConfig.appbar);
         break;
+      case FunctionConfig.tabbar:
+        Get.toNamed(RouteConfig.tabbar);
+        break;
       default:
         showSnackBar(context, '暂无');
         break;
