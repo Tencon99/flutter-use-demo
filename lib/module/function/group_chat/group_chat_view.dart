@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import 'group_chat_logic.dart';
 import 'group_chat_state.dart';
+import 'widget/custom_rrect_tab_indicator.dart';
 
 /// @description:
 /// @author
@@ -18,7 +19,20 @@ class GroupChatPage extends StatelessWidget {
       length: state.tabs.length,
       child: BaseScaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           bottom: TabBar(
+            isScrollable: true,
+            labelPadding: EdgeInsets.symmetric(horizontal: 8),
+            indicator: CustomRRecTabIndicator(
+                radius: 14.75, color: Color(0xffffe7e7), width: 120),
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 0,
+            labelColor: Color(0xffef3454),
+            labelStyle: TextStyle(
+                fontSize: 15,
+                color: Color(0xffef3454),
+                fontWeight: FontWeight.w700),
+            unselectedLabelColor: Color(0xffcccccc),
             controller: state.controller,
             tabs: state.tabs.map((e) => Tab(text: e)).toList(),
           ),
